@@ -9,10 +9,6 @@
 import UISwift
 
 class BaseViewController: ViewController {
-    var superview: ViewElement? {
-        view
-    }
-
     var subview1: ViewElement? = .instance()
     var subview2: ViewElement? = .instance()
     var subview3: ViewElement? = .instance()
@@ -26,18 +22,18 @@ class BaseViewController: ViewController {
     }
 
     func doNotUse() {
-        superview?.embed(subview1, >-20)
+        embed(subview1, >-20)
 
         embed(subviews, .vertical(>-20))
-        superview?.center(subviews, .horizontal)
+        center(subviews, .horizontal)
 
         ViewElement.chain([subview1, subview2, subview3], .vertical)
 
         subview1?.chain(subview2, .vertical)
         subview2?.chain(subview3, .vertical)
 
-        superview?.center(subview1)
-        superview?.center(subviews, .vertical)
+		center(subview1)
+        center(subviews, .vertical)
 
         subview1?.center(subview2)
 
