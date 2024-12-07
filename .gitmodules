@@ -1,3 +1,15 @@
 [submodule "configs"]
 	path = configs
 	url = https://github.com/piyush-2450/configs.git
+[submodule "Repos/configs"]
+	path = Repos/configs
+	url = git@2450.github.com:piyush-2450/configs.git
+[submodule "Repos/Collections"]
+	path = Repos/Collections
+	url = git@2450.github.com:piyush-2450/Collections.git
+[submodule "Repos/Observe"]
+	path = Repos/Observe
+	url = git@2450.github.com:piyush-2450/Observe.git
+[submodule "Repos/UISwift"]
+	path = Repos/UISwift
+	url = git@2450.github.com:piyush-2450/UISwift.git
