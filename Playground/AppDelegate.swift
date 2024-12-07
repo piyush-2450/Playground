@@ -47,7 +47,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                           backing: .buffered,
                           defer: false)
         window.center()
-        window.title = "SugarUI Demo"
+        window.title = "Playground"
         window.contentViewController = BaseViewController()
         window.makeKeyAndOrderFront(nil)
     }

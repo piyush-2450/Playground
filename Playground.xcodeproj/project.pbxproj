@@ -10,6 +10,8 @@
 		0E5EA65B2410352600FD3D61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5EA65A2410352600FD3D61 /* AppDelegate.swift */; };
 		0E5EA65F2410352600FD3D61 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5EA65E2410352600FD3D61 /* BaseViewController.swift */; };
 		0E5EA6642410352A00FD3D61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E5EA6632410352A00FD3D61 /* Assets.xcassets */; };
+		4B8938282D0487CC00497A21 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 4B8938272D0487CC00497A21 /* Collections */; };
+		4B89382B2D0487EC00497A21 /* Observe in Frameworks */ = {isa = PBXBuildFile; productRef = 4B89382A2D0487EC00497A21 /* Observe */; };
 		4B9AB46F2D01FC3F007BAF55 /* UISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4B9AB46E2D01FC3F007BAF55 /* UISwift */; };
 		4B9AB4732D0200C6007BAF55 /* UISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4B9AB4722D0200C6007BAF55 /* UISwift */; };
 /* End PBXBuildFile section */
@@ -40,6 +42,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B8938282D0487CC00497A21 /* Collections in Frameworks */,
+				4B89382B2D0487EC00497A21 /* Observe in Frameworks */,
 				4B9AB4732D0200C6007BAF55 /* UISwift in Frameworks */,
 				4B9AB46F2D01FC3F007BAF55 /* UISwift in Frameworks */,
 			);
@@ -131,6 +135,8 @@
 			mainGroup = 0E5EA64E2410352600FD3D61;
 			packageReferences = (
 				4B9AB4712D0200C6007BAF55 /* XCRemoteSwiftPackageReference "UISwift" */,
+				4B8938262D0487CC00497A21 /* XCRemoteSwiftPackageReference "Collections" */,
+				4B8938292D0487EC00497A21 /* XCRemoteSwiftPackageReference "Observe" */,
 			);
 			productRefGroup = 0E5EA6582410352600FD3D61 /* Products */;
 			projectDirPath = "";
@@ -355,6 +361,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4B8938262D0487CC00497A21 /* XCRemoteSwiftPackageReference "Collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/piyush-2450/Collections.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		4B8938292D0487EC00497A21 /* XCRemoteSwiftPackageReference "Observe" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/piyush-2450/Observe.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		4B9AB46D2D01FC3F007BAF55 /* XCRemoteSwiftPackageReference "UISwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/piyush-2450/UISwift.git";
@@ -374,6 +396,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4B8938272D0487CC00497A21 /* Collections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B8938262D0487CC00497A21 /* XCRemoteSwiftPackageReference "Collections" */;
+			productName = Collections;
+		};
+		4B89382A2D0487EC00497A21 /* Observe */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B8938292D0487EC00497A21 /* XCRemoteSwiftPackageReference "Observe" */;
+			productName = Observe;
+		};
 		4B9AB46E2D01FC3F007BAF55 /* UISwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4B9AB46D2D01FC3F007BAF55 /* XCRemoteSwiftPackageReference "UISwift" */;
