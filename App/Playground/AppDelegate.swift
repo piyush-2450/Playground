@@ -18,7 +18,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
 
         window = UIWindow(frame: UIScreen.main.bounds)
-		window?.rootViewController = BaseViewController()
+		window?.rootViewController = MainViewController.instance()
 		window?.makeKeyAndVisible()
 
         return true
@@ -48,7 +48,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                           defer: false)
         window.center()
         window.title = "Playground"
-        window.contentViewController = BaseViewController()
+        window.contentViewController = MainViewController.instance()
         window.makeKeyAndOrderFront(nil)
     }
 

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0E5EA65B2410352600FD3D61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5EA65A2410352600FD3D61 /* AppDelegate.swift */; };
-		0E5EA65F2410352600FD3D61 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5EA65E2410352600FD3D61 /* BaseViewController.swift */; };
+		0E5EA65F2410352600FD3D61 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5EA65E2410352600FD3D61 /* MainViewController.swift */; };
 		0E5EA6642410352A00FD3D61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E5EA6632410352A00FD3D61 /* Assets.xcassets */; };
 		4B8938282D0487CC00497A21 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 4B8938272D0487CC00497A21 /* Collections */; };
 		4B89382B2D0487EC00497A21 /* Observe in Frameworks */ = {isa = PBXBuildFile; productRef = 4B89382A2D0487EC00497A21 /* Observe */; };
@@ -31,7 +31,7 @@
 
 /* Begin PBXFileReference section */
 		0E5EA65A2410352600FD3D61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0E5EA65E2410352600FD3D61 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		0E5EA65E2410352600FD3D61 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0E5EA6632410352A00FD3D61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E5EA6682410352A00FD3D61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B9AB46C2D01FBE0007BAF55 /* Playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Playground.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,7 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				0E5EA65A2410352600FD3D61 /* AppDelegate.swift */,
-				0E5EA65E2410352600FD3D61 /* BaseViewController.swift */,
+				0E5EA65E2410352600FD3D61 /* MainViewController.swift */,
 				0E5EA6632410352A00FD3D61 /* Assets.xcassets */,
 				0E5EA6682410352A00FD3D61 /* Info.plist */,
 			);
@@ -116,7 +116,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1610;
+				LastUpgradeCheck = 1620;
 				ORGANIZATIONNAME = "Piyush Banerjee";
 				TargetAttributes = {
 					0E5EA6562410352600FD3D61 = {
@@ -163,7 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E5EA65F2410352600FD3D61 /* BaseViewController.swift in Sources */,
+				0E5EA65F2410352600FD3D61 /* MainViewController.swift in Sources */,
 				0E5EA65B2410352600FD3D61 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,6 +175,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -241,6 +242,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
