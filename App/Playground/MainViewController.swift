@@ -12,7 +12,7 @@ import Observe
 import UISwift
 
 class MainViewController: ViewController {
-	final class MainItemView: ConcreteListItemView {
+	final class MainItemView: ConcreteGridItemView {
 		override func setup() {
 			super.setup()
 			bgColor = .gray
@@ -24,32 +24,29 @@ class MainViewController: ViewController {
 		let text: String
 	}
 
-	let viewModels: ObservableList<ViewModel> = .init(
-		rows: 10,
-		columns: 7
-	)
+	let viewModels: ObservableGrid<ViewModel> = .init(10, 7)
 
-	private(set) lazy var listView: ListView = {
+	private(set) lazy var gridView: GridView = {
 		.instance(.vertical)
 	}()
 
 	private(set) lazy var binder = {
-		ListViewBinder<
+		GridViewBinder<
 			ViewModel,
-			ObservableList<ViewModel>,
-			ListView,
+			ObservableGrid<ViewModel>,
+			GridView,
 			MainItemView
 		>(
-			list: viewModels,
-			listView: listView
-		) { listIndex, viewModel, itemView in
+			grid: viewModels,
+			gridView: gridView
+		) { gridIndex, viewModel, itemView in
 			itemView.bgColor = viewModel?.color
 		}
 	}()
 
 	func updateRandomElement() {
-		let randomRow = Int.random(in: 0..<viewModels.rows)
-		let randomColumn = Int.random(in: 0..<viewModels.columns)
+		let randomRow = Int.random(in: 0..<viewModels.dimensions[0])
+		let randomColumn = Int.random(in: 0..<viewModels.dimensions[1])
 		let viewModel = ViewModel(
 			color: .random(),
 			text: "[\(randomRow), \(randomColumn)]"
@@ -86,10 +83,10 @@ class MainViewController: ViewController {
         super.viewDidLoad()
 		bgColor = .white
 
-		embed(listView)
+		embed(gridView)
 
-		binder.onSelect { listIndex, value, itemView in
-			print(listIndex, value?.text as Any)
+		binder.onSelect { gridIndex, value, itemView in
+			print(gridIndex, value?.text as Any)
 		}
     }
 
