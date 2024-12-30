@@ -40,7 +40,9 @@ class MainViewController: ViewController {
 			grid: viewModels,
 			gridView: gridView
 		) { gridIndex, viewModel, itemView in
-			itemView.bgColor = viewModel?.color
+			ViewElement.animate(withDuration: 0.25) {
+				itemView.bgColor = viewModel?.color
+			}
 		}
 	}()
 
@@ -55,27 +57,12 @@ class MainViewController: ViewController {
 		viewModels[randomRow, randomColumn] = viewModel
 	}
 
-	func clearTimers() {
-		viewModels.removeAllObservers()
-		timer.invalidate()
-		timer2.invalidate()
-	}
-
 	private(set) lazy var timer = {
 		Timer.scheduledTimer(
-			withTimeInterval: 0.000005, // 5 nanoseconds
+			withTimeInterval: 0.5,
 			repeats: true
 		) { [weak self] _ in
 			self?.updateRandomElement()
-		}
-	}()
-
-	private(set) lazy var timer2 = {
-		Timer.scheduledTimer(
-			withTimeInterval: 60 * 1, // 1 minute
-			repeats: false
-		) { [weak self] _ in
-			self?.clearTimers()
 		}
 	}()
 
@@ -94,7 +81,6 @@ class MainViewController: ViewController {
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		let _ = timer
-		let _ = timer2
 	}
 #endif
 }
